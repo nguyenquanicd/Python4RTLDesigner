@@ -77,9 +77,9 @@ for line in RTLFileH:
     elif (StartCommentBlock == 1):
         if (re.search("\*/$", line)):
             StartCommentBlock = 0
-    elif (re.search("^input", line)
-       or re.search("^output", line)
-       or re.search("^inout", line)):
+    elif (re.search("^input ", line)
+       or re.search("^output ", line)
+       or re.search("^inout ", line)):
            line = re.sub("]", "] ", line)
            line = re.sub("\[", " [", line)
            line = re.sub("\s+", " ", line)
